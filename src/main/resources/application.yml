@@ -1,0 +1,15 @@
+greeting:
+  message: "hello"
+
+quarkus:
+  datasource:
+    jdbc:
+      driver: org.h2.Driver
+      url: "jdbc:h2:mem:default"
+      min-size: 3
+      max-size: 13
+    username: default
+  hibernate-orm:
+    dialect: org.hibernate.dialect.H2Dialect
+    database:
+      generation: update
