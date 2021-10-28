@@ -13,3 +13,17 @@ quarkus:
     dialect: org.hibernate.dialect.H2Dialect
     database:
       generation: update
+  hibernate-search-orm:
+    elasticsearch:
+      version: 7
+      analysis:
+        configurer: com.example.config.AnalysisConfigurer
+      automatic-indexing:
+        synchronization:
+          strategy: drop-and-create
+      elasticsearch:
+        schema-management:
+          required-status: yellow
+    automatic-indexing:
+      synchronization:
+        strategy: searchable
